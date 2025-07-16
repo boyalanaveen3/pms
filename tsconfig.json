@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    /* ------ core settings ------ */
+    "target": "ES2020",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./dist",
+
+    /* ------ strictness & interop ------ */
+    "strict": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+
+    /* ------ debugging ------ */
+    "sourceMap": true,
+
+    /* ------ PATH ALIAS ------ */
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"]
+    }
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}
