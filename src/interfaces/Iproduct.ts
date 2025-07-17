@@ -8,6 +8,7 @@ export interface IPRODUCT extends Document {
   IMAGE_URL?: string;
   CREATED_AT?: Date;
   UPDATED_AT?: Date;
+  R_ID:Number;
 }
 
 export interface ICATEGORY extends Document{

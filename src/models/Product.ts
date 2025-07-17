@@ -17,6 +17,7 @@ const ProductSchema: Schema<IPRODUCT> = new Schema(
         },
         IS_AVAILABLE: { type: Boolean, default: true },
         IMAGE_URL: { type: String },
+        R_ID:{type:Number,required:true}
     },
     { timestamps: true }
 );
