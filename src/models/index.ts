@@ -2,4 +2,6 @@
 import "./Register"
 import  UserModel  from "./Register";
 import LoginModel from "./Login";
-export  { UserModel,LoginModel}
+import catagory from "./catagory";
+import Product from "./Product";
+export  { UserModel,LoginModel,catagory,Product}

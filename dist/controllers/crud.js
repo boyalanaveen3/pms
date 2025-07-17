@@ -5,15 +5,17 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.DbController = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
-require("../models/Register");
-require("../models/Login");
+// import "../models/Register";
+// import "../models/Login"
+// import "../models/Product"
+require("../models/index");
 class DbController {
     static async create(req, res) {
         try {
             const { model, data } = req.body;
             if (!model || !data) {
                 res.status(400).json({ error: "model and data are required" });
-                return;
+                return; /* it sends an error to the user.Then it uses return to stop the function */
             }
             const mongooseModel = mongoose_1.default.models[model];
             const result = await mongooseModel.create(data);

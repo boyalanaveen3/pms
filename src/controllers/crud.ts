@@ -1,8 +1,9 @@
 import { Request, Response } from "express";
 import mongoose, { Model, Document } from "mongoose";
-import "../models/Register";
-import "../models/Login"
-
+// import "../models/Register";
+// import "../models/Login"
+// import "../models/Product"
+import "../models/index"
 
 interface ICrudRequestBody {
   model: string;
@@ -12,12 +13,12 @@ interface ICrudRequestBody {
 }
 
 export class DbController {
- public static async create(req: Request, res: Response): Promise<void> {
+ public static async create(req: Request, res: Response): Promise<void> {/* void means: this function doesn't give anything back.Promise means: it's an async function, so it returns something later. */
     try {
       const { model, data }: ICrudRequestBody = req.body;
       if (!model || !data) {
         res.status(400).json({ error: "model and data are required" });
-        return;
+        return;/* it sends an error to the user.Then it uses return to stop the function */
       }
 
       const mongooseModel = mongoose.models[model] as Model<Document>;
